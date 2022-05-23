@@ -2,15 +2,18 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import DashboardSideber from '../DashboardSideber/DashboardSideber';
+import RequarAuth from '../RequarAuth/RequarAuth';
 
 
 
 
 const Dashboard = () => {
     return (
-        <DashboardSideber>
-            <Outlet></Outlet>
-        </DashboardSideber>
+        <RequarAuth>
+            <DashboardSideber>
+                <Outlet></Outlet>
+            </DashboardSideber>
+        </RequarAuth>
     );
 };
 

@@ -1,0 +1,16 @@
+.them{
+    display: flex;
+    background: #7a8aa9;
+    height: 11rem;
+    width: 30rem;
+    filter: blur(150px);
+    clip-path: ellipse(90% -10% at 25% -70%);
+    position: absolute;
+    top: -180px;
+}
+.shado{
+    border-radius: 50px;
+    box-shadow:  13px 13px 25px #5a5a5a,
+                 -13px -13px 25px #ffffff;
+}
+
