@@ -1,0 +1,21 @@
+.photo {
+    height: 230px;
+    width: 370px;
+    margin: 0px auto;  
+}
+
+.carts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+   
+    .carts {
+        grid-template-columns: 1fr;
+        
+    }
+}

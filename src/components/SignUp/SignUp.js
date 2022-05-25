@@ -21,7 +21,7 @@ const SignUp = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  const navigat = useNavigate();
+  const Navigate = useNavigate();
 
   let errorMessage;
 
@@ -38,14 +38,14 @@ const SignUp = () => {
 
   if (user || guser) {
     console.log(user || guser);
-    navigat('/services')
+    Navigate('/')
   }
 
   const onSubmit = async data => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigat('/services')
+    Navigate('/')
   }
 
   return (

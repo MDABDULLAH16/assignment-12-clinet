@@ -37,11 +37,11 @@ const Login = () => {
 
   if (user || guser) {
     console.log(user || guser);
-    navigat('/services')
+    navigat('/home')
   }
 
   const onSubmit = data => {
-    navigat('/services')
+    navigat('/home')
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
   }
