@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
 
-const MyreviewCard = ({ user }) => {
+const MyReviewCard = ({ user }) => {
   const { name, review, star } = user;
   return (
     <div class="card w-96 bg-neutral text-neutral-content">
@@ -16,4 +16,4 @@ const MyreviewCard = ({ user }) => {
   );
 };
 
-export default MyreviewCard;
+export default MyReviewCard;

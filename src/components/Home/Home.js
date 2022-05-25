@@ -2,7 +2,9 @@ import React from 'react';
 import Cards from '../Cards/Cards';
 import Banner from '../Banner/Banner';
 import Summary from '../Summary/Summary';
-import MyReviewMap from '../MyReviewMap/MyrevirewMap';
+import MyRevirewMap from '../MyrevirewMap/MyrevirewMap';
+
+
 
 const Home = () => {
     return (
@@ -10,7 +12,7 @@ const Home = () => {
             <h1>this is home</h1>
             <Banner></Banner>
             <Cards></Cards>
-            <MyReviewMap></MyReviewMap>
+            <MyRevirewMap></MyRevirewMap>
             <Summary></Summary>
         </div>
     );

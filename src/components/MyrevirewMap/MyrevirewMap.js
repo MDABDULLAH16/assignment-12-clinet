@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import MyreviewCard from '../MyreviewCard/MyreviewCard';
-import './MyeviewMap.css';
+import MyReviewCard from '../MyReviewCard/MyreviewCard';
 
-const MyreviewMap = () => {
+
+import './MyreviewMap.css';
+
+const MyRevirewMap = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/review')
@@ -16,11 +18,11 @@ const MyreviewMap = () => {
 
 
                 {
-                    users?.map(user => <MyreviewCard
+                    users?.map(user => <MyReviewCard
                         key={user._id}
                         user={user}
 
-                    ></MyreviewCard>)
+                    ></MyReviewCard>)
                 }
             </div>
 
@@ -29,4 +31,4 @@ const MyreviewMap = () => {
 };
 
 
-export default MyreviewMap;
+export default MyRevirewMap;
