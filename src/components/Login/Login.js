@@ -36,7 +36,7 @@ const Login = () => {
   }
 
   if (user || guser) {
-    console.log(user || guser);
+    // console.log(user || guser);
     navigat('/home')
   }
 

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import MyReviewCard from '../MyReviewCard/MyreviewCard';
+
+import { useEffect, useState } from 'react';
+import MyReviewCard from '../MyreviewCard/MyreviewCard';
 
 
 import './MyreviewMap.css';
@@ -12,9 +13,11 @@ const MyRevirewMap = () => {
             .then(data => setUsers(data))
     }, [])
     return (
-        <div className="mt-24">
-            <h1 className='text-center text-red-500 mb-11 font-bold text-2xl' >Review section </h1>
-            <div className="cartss">
+        <div className="">
+            <div className='bg-indigo-200 py-4'>
+                <h1 className='font-bold text-2xl  '>All Review</h1>
+            </div>
+            <div className=" grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-px text-gray-800 font-semibold">
 
 
                 {

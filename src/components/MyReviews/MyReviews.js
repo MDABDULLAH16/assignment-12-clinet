@@ -21,7 +21,7 @@ const MyReviews = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                alert('user Updated susccessfully');
+                alert('Reviews add susccessfully');
             })
         navigat('/dashboard')
 

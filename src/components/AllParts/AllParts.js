@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../Card/Card';
+import AllPartsCard from './AllPartsCard';
 
-const Cards = () => {
+const AllParts = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/part')
@@ -11,16 +11,16 @@ const Cards = () => {
     return (
         <div className=''>
             <div className=' bg-gray-200 py-4 '>
-                <span className='text-2xl font-bold'>Parts Simple</span>
+                <span className='text-2xl font-bold'>All Part</span>
             </div>
             <div className=" grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-px text-gray-800 font-semibold">
                 {
-                    cards?.slice(0, 6).map(card => <Card
+                    cards?.map(card => <AllPartsCard
                         key={card._id}
                         card={card}
 
 
-                    ></Card>
+                    ></AllPartsCard>
                     )
                 }
 
@@ -29,5 +29,4 @@ const Cards = () => {
         </div>
     );
 };
-
-export default Cards;
+export default AllParts;

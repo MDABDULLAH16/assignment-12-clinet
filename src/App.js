@@ -2,6 +2,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import AddItem from './components/AddItem/AddItem';
+import AllParts from './components/AllParts/AllParts';
 import Blogs from './components/Blogs/Blogs';
 import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/Footer/Footer';
@@ -11,6 +13,7 @@ import MyOrders from './components/MyOrders/MyOrders';
 import MyProfile from './components/MyProfile/MyProfile';
 import MyReviews from './components/MyReviews/MyReviews';
 import Navber from './components/Navber/Navber';
+import Purchese from './components/Purchese/Purchese';
 import Services from './components/Services/Services';
 import SignUp from './components/SignUp/SignUp';
 
@@ -27,7 +30,10 @@ function App() {
           <Route path='/dashboard/myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='/dashboard/myreviews' element={<MyReviews></MyReviews>} ></Route>
           <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/addIteams' element={<AddItem></AddItem>}></Route>
+          <Route path='/dashboard/allItems' element={<AllParts></AllParts>}></Route>
         </Route>
+        <Route path='/purchese/:id' element={<Purchese></Purchese>}></Route>
 
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
