@@ -27,7 +27,7 @@ const Navber = () => {
                 </label>)}
 
             </div>
-            <a className="btn btn-ghost mx-auto normal-case text-xl">Abdullah</a>
+            <a className="btn btn-ghost mx-auto normal-case text-2xl font-bold">Car Parts</a>
             <div className="navbar-end">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -35,8 +35,7 @@ const Navber = () => {
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-3 shadow bg-base-100 rounded-box w-30">
                         <li><NavLink to='/home'>Home</NavLink></li>
-                        <li><NavLink to='/about'>About</NavLink></li>
-                        <li><NavLink to='/services'>Services</NavLink></li>
+
                         <li><NavLink to='/blogs'>Blogs</NavLink></li>
                         {user &&
                             <li><NavLink to='/dashboard/myprofile'>Dashboard</NavLink></li>}
@@ -47,8 +46,7 @@ const Navber = () => {
             <div className="navbar-center  hidden lg:flex">
                 <ul className="menu menu-horizontal p-2 items-center ">
                     <li className="mr-3"><NavLink to='/home'>Home</NavLink></li>
-                    <li className="mr-3"><NavLink to='/about'>About</NavLink></li>
-                    <li className="mr-3"><NavLink to='/services'>Services</NavLink></li>
+
                     {user &&
                         <li><NavLink to='/dashboard/myprofile'>Dashboard</NavLink></li>}
                     <li className="mr-3"><NavLink to='/blogs'>Blogs</NavLink></li>

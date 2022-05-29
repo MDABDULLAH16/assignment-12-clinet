@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './components/About/About';
+
 import AddItem from './components/AddItem/AddItem';
 import AllParts from './components/AllParts/AllParts';
 import AllUsers from './components/AllUsers/AllUsers';
@@ -15,7 +15,7 @@ import MyProfile from './components/MyProfile/MyProfile';
 import MyReviews from './components/MyReviews/MyReviews';
 import Navber from './components/Navber/Navber';
 import Purchese from './components/Purchese/Purchese';
-import Services from './components/Services/Services';
+
 import SignUp from './components/SignUp/SignUp';
 
 
@@ -26,7 +26,7 @@ function App() {
       <Navber></Navber>
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/services' element={<Services></Services>}></Route>
+
         <Route path='/dashboard' element={<Dashboard></Dashboard>}>
           <Route path='/dashboard/myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='/dashboard/myreviews' element={<MyReviews></MyReviews>} ></Route>
@@ -39,7 +39,7 @@ function App() {
 
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
+
         <Route path='/login' element={<Login></Login>} ></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>

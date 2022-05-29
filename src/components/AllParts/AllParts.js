@@ -4,7 +4,7 @@ import AllPartsCard from './AllPartsCard';
 const AllParts = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/part')
+        fetch('https://radiant-sea-36060.herokuapp.com/part')
             .then(res => res.json())
             .then(data => setCards(data))
     }, [])

@@ -8,7 +8,7 @@ import './MyreviewMap.css';
 const MyRevirewMap = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://radiant-sea-36060.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])

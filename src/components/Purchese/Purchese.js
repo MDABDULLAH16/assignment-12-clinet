@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Purchese = () => {
     const [user] = useAuthState(auth);
@@ -29,7 +30,7 @@ const Purchese = () => {
         const updatedQuantity = Aquantity - quantity;
 
         const update = { updatedQuantity };
-        fetch(`http://localhost:5000/part/${id}`, {
+        fetch(`https://radiant-sea-36060.herokuapp.com/order`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -54,25 +55,19 @@ const Purchese = () => {
             userAddress: e.target.address.value,
         };
 
-        fetch("http://localhost:5000/part", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(purchasedInfo),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                toast.success("Order confirmed");
-                navigate("/");
-            });
+        axios.post('https://radiant-sea-36060.herokuapp.com/order', purchasedInfo)
+            .then(response => {
+                const { data } = response;
+                if (data.insertId) {
+                    toast(
+                        'Your Order is booked'
+                    )
+                }
+            })
+        navigate('/home');
     };
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/part/${id}`)
-            .then((res) => res.json())
-            .then((data) => setPurchase(data));
-    }, []);
+
     return (
         <div className="my-5">
             <h2 className="text-4xl font-bold text-center text-primary py-3 uppercase">

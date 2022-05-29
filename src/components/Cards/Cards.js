@@ -6,7 +6,7 @@ const Cards = () => {
 
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5000/part`
+        const url = `https://radiant-sea-36060.herokuapp.com/part`
         fetch(url)
             .then(res => res.json())
             .then(data => setCards(data))
