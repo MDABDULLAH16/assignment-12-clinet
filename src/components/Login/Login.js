@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Loading/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
@@ -25,6 +26,7 @@ const Login = () => {
 
 
   let errorMessage;
+  const [token] = useToken(user || guser)
 
 
   if (loading || gloading) {
@@ -35,7 +37,7 @@ const Login = () => {
     errorMessage = <p className='text-red-500 text-center p-3'><small>{error?.message || gerror?.message}</small></p>
   }
 
-  if (user || guser) {
+  if (token) {
     // console.log(user || guser);
     navigat('/home')
   }

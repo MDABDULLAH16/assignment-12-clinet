@@ -5,8 +5,11 @@ import { useForm } from "react-hook-form";
 
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
+
+
 
   const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
   const { register, formState: { errors }, handleSubmit } = useForm();
@@ -24,6 +27,7 @@ const SignUp = () => {
   const Navigate = useNavigate();
 
   let errorMessage;
+  const [token] = useToken(user || guser)
 
 
 
@@ -36,9 +40,9 @@ const SignUp = () => {
     errorMessage = <p className='text-red-500 text-center p-3'><small>{error?.message || updateError?.message || gerror?.message}</small></p>
   }
 
-  if (user || guser) {
+  if (token) {
     console.log(user || guser);
-    Navigate('/')
+    Navigate('/home')
   }
 
   const onSubmit = async data => {

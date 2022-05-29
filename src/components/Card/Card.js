@@ -15,7 +15,7 @@ const Card = ({ card }) => {
                     <p className='text-semibold'> <small>Available Quantity: {Aquantity}</small></p>
                     <p className='text-xs'><small>Discriptions: {description.slice(0, 80)}</small></p>
                     <div>
-                        <Link to={`/purchese/${_id}`}><button className='border w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-800 mt-3 font-semibold'>Buy Now</button></Link>
+                        <Link to={`/purchese/${_id}`}><button className='border w-full bg-indigo-600 text-white rounded-md hover:bg-indigo-800 mt-3 font-semibold'>Purchese</button></Link>
                     </div>
                 </div>
             </div>

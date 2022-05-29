@@ -4,6 +4,7 @@ import './App.css';
 import About from './components/About/About';
 import AddItem from './components/AddItem/AddItem';
 import AllParts from './components/AllParts/AllParts';
+import AllUsers from './components/AllUsers/AllUsers';
 import Blogs from './components/Blogs/Blogs';
 import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/Footer/Footer';
@@ -32,6 +33,7 @@ function App() {
           <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='/dashboard/addIteams' element={<AddItem></AddItem>}></Route>
           <Route path='/dashboard/allItems' element={<AllParts></AllParts>}></Route>
+          <Route path='/dashboard/allusers' element={<AllUsers></AllUsers>}></Route>
         </Route>
         <Route path='/purchese/:id' element={<Purchese></Purchese>}></Route>
 

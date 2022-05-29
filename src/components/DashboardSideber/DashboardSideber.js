@@ -19,6 +19,7 @@ const DashboardSideber = ({ children }) => {
                     <li><NavLink to='/dashboard/myreviews'>Add Reviews</NavLink></li>
                     <li><NavLink to='/dashboard/addIteams'>Add Parts</NavLink></li>
                     <li><NavLink to='/dashboard/allItems'>All Parts</NavLink></li>
+                    <li><NavLink to='/dashboard/allusers'>All Users</NavLink></li>
 
                 </ul>
 
